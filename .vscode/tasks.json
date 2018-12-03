@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "/MDd",
+                
+                "/W4",
+                "/EHsc", 
+                "/ZI",
+                "/I'C:/DevelopSoftware/glfw-3.2.1/include'",
+                "/I'C:/DevelopSoftware/glm-0.9.9.3'",
+                "/I'C:/DevelopSoftware/Vulkan1.1.92.1/Include'",
+                "/Fd'${workspaceFolder}/Debug/'",
+                "/Fo'${workspaceFolder}/Debug/'",
+                "main.cpp",
+                "/link",
+                "/out:'${workspaceFolder}/Debug/VulkanLearn.exe'",
+                "vulkan-1.lib","glfw3.lib",
+                "kernel32.lib","user32.lib","gdi32.lib","winspool.lib","comdlg32.lib","advapi32.lib","shell32.lib","ole32.lib","oleaut32.lib","uuid.lib","odbc32.lib","odbccp32.lib",
+                "/DEBUG",
+                "/LIBPATH:'C:/DevelopSoftware/glfw-3.2.1/lib-vc2015/'",
+                "/LIBPATH:'C:/DevelopSoftware/Vulkan1.1.92.1/Lib/'",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
