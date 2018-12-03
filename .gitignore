@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+Debug/VulkanLearn.pdb
+Debug/VulkanLearn.ilk
+Debug/vc140.idb
+Debug/vc140.pdb
